@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Volcano coin</title>
+  </head>
+  <style>
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 50%;
+  background-color: #6f55e4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #cc5c40;
+}
+  </style>
+  <body>
+    <div>
+      <h1 style="text-align: center"> <span   style="color:red"  >Volcano </span><span style="color:blue">Coin</span></h1>
+      <p >You have <strong class="balance">loading...</strong> Volcano Coin</p>
+
+    <h2>Send Volcano coin</h2>
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" placeholder="e.g. 95" />
+    </br>
+    <label for="receiver">To address:</label>
+    <input
+      type="text"
+      id="receiver"
+      placeholder="e.g. 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"
+    />
+    <button onclick="App.transfer()" class="btn">Transfer Volcano coin</button> 
+    <p id="status"></p>
+    </br>
+  <hr></hr>
+    <h2>Get payment information</h2>
+    <label for="index">Index:</label>
+    <input type="text" id="index"  />
+    <button onclick="App.getPaymentInfo()" class="btn">Get payment info</button>
+    <p id="data"></p>
+<hr></hr>
+   <h2>Click to change totalSupply by 1000</h2>
+    <button onclick="App.changeTotalSupply()" class="btn">Change totalSupply</button>
+<p id="change"></p>
+
+<hr></hr>
+    <p>
+      <strong>Hint:</strong> open the browser developer console to view any
+      errors and warnings.
+    </p>
+</div>
+    <script src="index.js"></script>
+  </body>
+</html>
